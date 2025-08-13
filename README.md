@@ -185,7 +185,7 @@ graph TB
     end
 
     subgraph "API服务层 API Service Layer"
-        I[/api/agent - AI Agent]
+        I[/api/agent - AI Agent执行]
         J[/api/upload-docx - 文档上传]
         K[/api/check-model - 模型检查]
         L[/api/financial-data-extractor - 数据提取]
@@ -219,9 +219,10 @@ graph TB
     G --> R
 
     I --> M
-    J --> S
+    J --> S     
     K --> P
-    L --> M
+    L --> I     
+    J --> L     
 ```
 
 **📝 文本版架构说明:**
